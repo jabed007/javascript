@@ -75,3 +75,30 @@ for (let key of Object.keys(user)) {
 for (let val of Object.values(user)) {
   console.log(val);
 }
+
+// Exercise -> Total Salary
+const salaries = {
+  john: 3000,
+  smith: 4000,
+  mary: 5000,
+  carlos: 6000,
+  robert: 7000,
+  harry: 8000,
+  david: 9000
+};
+
+let sum = 0;
+
+// for (let key in salaries) {
+//   sum += salaries[key];
+// }
+
+// console.log(sum);
+
+console.log(Object.values(salaries));
+
+for (let value of Object.values(salaries)) {
+  sum += value;
+}
+
+console.log(sum);
