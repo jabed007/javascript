@@ -56,3 +56,22 @@ const user2 = {
 };
 
 user2.calculateAge();
+
+// Traversing object methods and property
+// Way 1
+for (let key in user2) {
+  console.log(key, user2[key]);
+}
+
+// Way 2
+console.log(Object.keys(user)); // result shows as an array
+console.log(Object.values(user)); // result shows as an array
+
+// We can apply a for of loop in an array
+for (let key of Object.keys(user)) {
+  console.log(key);
+}
+
+for (let val of Object.values(user)) {
+  console.log(val);
+}
