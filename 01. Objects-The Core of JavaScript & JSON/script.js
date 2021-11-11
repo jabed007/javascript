@@ -41,3 +41,18 @@ user.age = user.age + 3;
 // DELETE
 //delete user['age'];
 console.log(user);
+
+//Objects Method and This Keywords
+const user2 = {
+  name: 'John',
+  age: '50',
+  isMarried: true,
+  friends: ['Marry', 'Smith'],
+  selectedColor: null,
+  calculateAge: function () {
+    console.log(this);
+    console.log(`I am ${this.age} years old`);
+  }
+};
+
+user2.calculateAge();
