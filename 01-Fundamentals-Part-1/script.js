@@ -56,3 +56,29 @@ console.log(year);
 console.log(typeof year);
 
 console.log(typeof null);
+
+// Assignment of Data Types
+let isIsland = "Bangladesh";
+let language;
+
+console.log("Output of Assignment 2");
+console.log(typeof isIsland);
+console.log(typeof population);
+console.log(typeof country);
+console.log(typeof language);
+
+// let const and var
+console.log("let const and var");
+let age = 31;
+age = 30;
+
+const birthYear = 1991;
+//birthYear = 1990; // error
+//const job; // error
+
+var job = "Programmer";
+job = "Teacher";
+console.log(job);
+
+lastName = "Schmedtmann";
+console.log(lastName);
