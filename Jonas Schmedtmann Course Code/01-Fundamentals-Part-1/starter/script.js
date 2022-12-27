@@ -189,3 +189,42 @@ console.log("String with \nmultiple \nlines");
 console.log(`String with
 Multiple
 Lines`);
+
+////////////////////////////////////
+// Taking Decisions: if / else Statements
+const ages = 15;
+
+if (ages >= 18) {
+  console.log("Sarah can start driving licence 🚗");
+} else {
+  const yearsLeft = 18 - ages;
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYears = 2012;
+
+let century;
+if (birthYears <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
+
+////////////////////////////////////
+// Coding Challenge #2
+
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+1. Print a nice output to the console, saying who has the higher BMI. The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+HINT: Use an if/else statement 😉
+GOOD LUCK 😀
+*/
+console.log(BMIMark, BMIJohn);
+
+if (BMIMark > BMIJohn) {
+  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+} else {
+  console.log(`John's BMI (${BMIJohn}) is higher than Marks's (${BMIMark})!`);
+}
