@@ -158,3 +158,34 @@ const BMIMark = massMark / heightMark ** 2;
 const BMIJohn = massJohn / (heightJohn * heightJohn);
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
+
+////////////////////////////////////
+// Strings and Template Literals
+console.log("------Strings and Template Literales------");
+const myFirstName = "Jonas";
+const myJob = "Teacher";
+const myBirthYear = 1991;
+const currentYear = 2037;
+
+const jonas =
+  " I'm " +
+  myFirstName +
+  ", a " +
+  (currentYear - myBirthYear) +
+  " year old " +
+  myJob +
+  "!";
+console.log(jonas);
+
+const jonasNew = `I'm ${myFirstName} a ${
+  currentYear - myBirthYear
+} years old ${myJob}!`;
+console.log(jonasNew);
+
+console.log(`Just a regualar string...`);
+
+console.log("String with \nmultiple \nlines");
+
+console.log(`String with
+Multiple
+Lines`);
