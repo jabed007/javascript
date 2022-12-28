@@ -278,3 +278,33 @@ if (height) {
 } else {
   console.log("Height is UNDFINED");
 }
+
+////////////////////////////////////
+// Equality Operators: == vs. ===
+console.log("-------------------------------");
+
+console.log("Equality Operators: == vs. ===");
+
+let yourAge = 18;
+yourAge = "18";
+if (yourAge === 18) console.log("You just became an adult :D (strict)");
+if (yourAge == 18) console.log("You just became an adult :D (loose)");
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+  // 23 === 23
+  console.log("Cool! 23 is an amazing number!");
+} else if (favourite === 7) {
+  console.log("7 is a also an amazing number");
+} else if (favourite === 9) {
+  console.log("9 is also an amazing number");
+} else {
+  console.log("Number is not 23 or 7 or 9");
+}
+
+if (favourite !== 23) {
+  console.log("Why not 23!");
+}
