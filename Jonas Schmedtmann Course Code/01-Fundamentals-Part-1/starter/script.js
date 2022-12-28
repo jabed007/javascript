@@ -308,3 +308,27 @@ if (favourite === 23) {
 if (favourite !== 23) {
   console.log("Why not 23!");
 }
+
+////////////////////////////////////
+// Logical Operators
+const hasDriversLicense = true; // A
+const hasGoodVsion = true; // B
+
+console.log(hasDriversLicense && hasGoodVsion);
+console.log(hasDriversLicense || hasGoodVsion);
+console.log(!hasDriversLicense);
+
+if (hasDriversLicense && hasGoodVsion) {
+  console.log("Sarah is able to drive :)");
+} else {
+  console.log("Someone else should drive!");
+}
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVsion && !isTired);
+
+if (hasDriversLicense && hasGoodVsion && !isTired) {
+  console.log("Sarah is able to drive :)");
+} else {
+  console.log("Someone else should drive...");
+}
