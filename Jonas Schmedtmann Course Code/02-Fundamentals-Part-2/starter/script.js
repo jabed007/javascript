@@ -206,3 +206,37 @@ const ages = [
 ];
 
 console.log(ages);
+
+///////////////////////////////////////
+// Basic Array Operations (Methods)
+const myFriends = ["Michael", "Steve", "Peter"];
+
+// Add elements
+const newLength = myFriends.push("Jay");
+console.log(myFriends);
+console.log(newLength);
+
+myFriends.unshift("John");
+console.log(myFriends);
+
+// Remove elements
+myFriends.pop(); // Last
+const popped = myFriends.pop();
+console.log(popped);
+console.log(myFriends);
+
+myFriends.shift(); // First
+console.log(myFriends);
+
+console.log(myFriends.indexOf("Steve"));
+console.log(myFriends.indexOf("Bob"));
+
+myFriends.push(23);
+console.log(myFriends.includes("Steven"));
+console.log(myFriends.includes("Bob"));
+console.log(myFriends.includes("23"));
+console.log(myFriends.includes(23));
+
+if (myFriends.includes("Steven")) {
+  console.log("You have a friend called Steven");
+}
