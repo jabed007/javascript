@@ -158,3 +158,51 @@ avgKoalas = calcAverage(23, 34, 27);
 console.log(avgDolphins, avgKoalas);
 
 checkWinner(avgDolphins, avgKoalas);
+
+///////////////////////////////////////
+// Introduction to Arrays
+const friend1 = "Michael";
+const friend2 = "Steven";
+const friend3 = "Peter";
+
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+const y = new Array(1991, 1984, 2008, 2020);
+console.log(y);
+
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Jay";
+console.log(friends);
+// friends = ['Bob', 'Alice'];
+
+const personName = "Jonas";
+const jonasArray = [personName, "Schmedtmann", 2037 - 1991, "teacher", friends];
+console.log(jonasArray);
+console.log(jonasArray.length);
+
+// Exercise
+const calcAges = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const myAge1 = calcAges(years[0]);
+const myAge2 = calcAges(years[1]);
+const myAge3 = calcAges(years[years.length - 1]);
+console.log(myAge1, myAge2, myAge3);
+
+const ages = [
+  calcAges(years[0]),
+  calcAges(years[1]),
+  calcAges(years[years.length - 1]),
+];
+
+console.log(ages);
