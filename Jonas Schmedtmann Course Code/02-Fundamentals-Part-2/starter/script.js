@@ -315,3 +315,45 @@ console.log(jonas);
 console.log(
   `${jonas["firstName"]} has ${jonas["friends"].length} friends, and his best freind is called ${jonas.friends[0]}`
 );
+
+///////////////////////////////////////
+// Object Methods
+
+const mosh = {
+  firstName: "Mosh",
+  lastName: "Hamedani",
+  birthYear: 1990,
+  job: "programmer",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriverLicense: true,
+
+  // calcAge: function(birthYear) {
+  //   return 2037 - this.birthYear;
+  // }
+
+  // calcAge: function() {
+  //   console.log(this);
+  //   return 2037 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.job
+    } and he has ${this.hasDriverLicense ? "a" : "no"} driver's license`;
+  },
+};
+
+console.log(mosh.calcAge());
+
+console.log(mosh.age);
+console.log(mosh.age);
+console.log(mosh.age);
+
+// Challenge
+// "Mosh is a 46-year old teacher, and he has a driver's license"
+console.log(mosh.getSummary());
