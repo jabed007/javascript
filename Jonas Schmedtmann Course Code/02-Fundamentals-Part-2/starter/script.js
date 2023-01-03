@@ -416,3 +416,100 @@ if (john.bmi > mark.bmi) {
 } else {
   console.log("Nothing to print");
 }
+
+///////////////////////////////////////
+// Iteration: The for Loop
+console.log("Lifting weights repetition 1 🏋️‍♀️");
+console.log("Lifting weights repetition 2 🏋️‍♀️");
+console.log("Lifting weights repetition 3 🏋️‍♀️");
+console.log("Lifting weights repetition 4 🏋️‍♀️");
+console.log("Lifting weights repetition 5 🏋️‍♀️");
+console.log("Lifting weights repetition 6 🏋️‍♀️");
+console.log("Lifting weights repetition 7 🏋️‍♀️");
+console.log("Lifting weights repetition 8 🏋️‍♀️");
+console.log("Lifting weights repetition 9 🏋️‍♀️");
+console.log("Lifting weights repetition 10 🏋️‍♀️");
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 30; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+}
+
+///////////////////////////////////////
+// Looping Arrays, Breaking and Continuing
+const stephen = [
+  "Stephen",
+  "Grider",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+  true,
+];
+
+const types = [];
+
+// console.log(jonas[0]);
+// console.log(jonas[1]);
+// ...
+// console.log(jonas[4]);
+// jonas[5] does NOT exists
+
+for (let i = 0; i < stephen.length; i++) {
+  // Reading from stephen array
+  console.log(stephen[i], typeof stephen[i]);
+  types[i] = typeof stephen[i];
+  types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const era = [1991, 2007, 1969, 2020];
+const youth = [];
+
+for (let i = 0; i < era.length; i++) {
+  youth.push(2037 - era[i]);
+}
+
+console.log(youth);
+
+// continue and break
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < stephen.length; i++) {
+  if (typeof stephen[i] !== "string") {
+    continue;
+  }
+  console.log(stephen[i], typeof stephen[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < stephen.length; i++) {
+  if (typeof stephen[i] === "number") {
+    break;
+  }
+  console.log(stephen[i], typeof stephen[i]);
+}
+
+///////////////////////////////////////
+// Looping Backwards and Loops in Loops
+const jalal = [
+  "Jalal",
+  "Uddin",
+  "2037 - 1991",
+  "teacher",
+  ["Sadman", "Sakib", "Sajib"],
+  true,
+];
+
+// 0, 1, ..., 4
+// 4, 3, ..., 0
+
+for (let i = jalal.length - 1; i >= 0; i--) {
+  console.log(i, jalal[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------------Starting exercise ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♂️`);
+  }
+}
