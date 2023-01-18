@@ -113,16 +113,13 @@ console.log(rectangle);
 // Every object in JavaScript has a property called constructor
 // And that references the function that was used to construct or create that object.
 
-// Functions are Objects
-// One of the confusing concepts in JavaScript is here functions are objects.
-
 // Every object in JavaScript has a constructor property, and that refernces the function taht was create taht object.
 
 // When we create an object using object literal syntax, intermnally the Javascript engine uses this constructor function.
 
 // Example
 
-let x = {}; // -> When use this syntax, object lliteral, Javascript will translate that to something like this
+//let x = {}; // -> When use this syntax, object lliteral, Javascript will translate that to something like this
 // let x = new Object();
 
 // In Javascript we have a few built in constructor, for example, we have
@@ -131,3 +128,87 @@ new Boolean(); // true, false
 new Number(); // 1, 2, 3
 
 // Every object has a constructor property and taht references a function that was used to create that object
+
+// Finctions are objects
+// Functions are Objects
+// One of the confusing concepts in JavaScript is here functions are objects.
+
+function Circle1(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+
+const another = new Circle1(1);
+another.draw();
+
+console.log(Circle1.name);
+console.log(Circle1.length);
+
+const Circle2 = new Function(
+  "radius",
+  `this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };`
+); // when we declare a functuion internally it's represent like this
+const c = new Circle2(2);
+console.log(c);
+
+// Value vs. References Type
+// In Javascript we have two categories of types.
+// On one side we have value types, also called primitives
+// On the other side we have Reference types
+
+// In Value type category we have->
+// 1. Number
+// 2. String
+// 3. Boolean
+// 4. Symbol
+// 5. undefined
+// 6. null
+// These are primitive or value types
+
+// On the other sides we have
+// 1. Object
+// 2. Function (also an object)
+// 3. Array (also an object)
+
+// So, in a nutshell in JavaScript we have primitives and objects.
+/*
+let x = 10; // x = 10
+let y = x; // y = 10
+x = 20; // x = 20, y = 10
+*/
+
+let x = { value: 10 }; // x = 10
+console.log(x);
+let y = x; // y = 10
+console.log(y);
+x.value = 20; // x = 20, y = 10
+console.log(x);
+console.log(y);
+
+// Primitives are copied by their value
+// Objects are copied by their reference
+/*
+let number = 10;
+
+function increase(number) {
+  number++;
+}
+
+increase(number);
+console.log(number);
+*/
+
+let obj = { value: 10 };
+
+function increase(obj) {
+  obj.value++;
+}
+
+increase(obj);
+
+console.log(obj);
