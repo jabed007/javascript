@@ -108,3 +108,26 @@ console.log(rectangle);
 
 delete rectangle.draw;
 console.log(rectangle);
+
+// Constructor Property
+// Every object in JavaScript has a property called constructor
+// And that references the function that was used to construct or create that object.
+
+// Functions are Objects
+// One of the confusing concepts in JavaScript is here functions are objects.
+
+// Every object in JavaScript has a constructor property, and that refernces the function taht was create taht object.
+
+// When we create an object using object literal syntax, intermnally the Javascript engine uses this constructor function.
+
+// Example
+
+let x = {}; // -> When use this syntax, object lliteral, Javascript will translate that to something like this
+// let x = new Object();
+
+// In Javascript we have a few built in constructor, for example, we have
+new String(); // '', "", ``
+new Boolean(); // true, false
+new Number(); // 1, 2, 3
+
+// Every object has a constructor property and taht references a function that was used to create that object
