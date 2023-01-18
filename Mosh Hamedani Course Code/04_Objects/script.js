@@ -88,3 +88,23 @@ function Circle(radius) {
 const myCircle = new Circle(20);
 console.log(myCircle);
 myCircle.draw();
+
+// Dynamic nature of objects
+// One thing we need to understand about objects in JavaScript is that they are dynamic which means once we create them we can always add new properties or methods, or remove existing ones.
+
+const rectangle = {
+  radius: 1,
+};
+console.log(rectangle);
+
+rectangle.color = "Yellow";
+console.log(rectangle);
+
+rectangle.draw = function () {};
+console.log(rectangle);
+
+delete rectangle.color;
+console.log(rectangle);
+
+delete rectangle.draw;
+console.log(rectangle);
