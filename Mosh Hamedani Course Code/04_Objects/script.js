@@ -72,3 +72,19 @@ const circle1 = createCircle(10);
 //console.log(circle1);
 circle1.draw();
 //circle.draw(); // Method
+
+// Constructor Function (Another pattern for creating objects)
+// The naming convention we use for construction functions is differnt. that is pascel notation
+
+// Camel Notation: oneTwoThreeFour
+// Pascal Notation: OneTwoThreeFour
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+
+const myCircle = new Circle(20);
+console.log(myCircle);
+myCircle.draw();
