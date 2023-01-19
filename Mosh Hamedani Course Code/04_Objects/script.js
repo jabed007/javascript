@@ -341,3 +341,21 @@ console.log(message.trimLeft());
 console.log(message);
 console.log(message.trimRight());
 console.log(message);
+
+// Template Literals
+const email = "This is my\n" + "'first' email";
+console.log(email);
+// Different kinds of literal in Javascript are
+// Object literals = {}
+// Boolean Literals = true, false
+// String Literals = '', ""
+// Now starting from es6 we have Template Literals = ``
+
+const name = "John";
+const anotherEmail = `Hi ${name} ${2 + 3}
+
+Thank you for joining my mailing list.
+
+Regards,
+Mosh`;
+console.log(anotherEmail);
