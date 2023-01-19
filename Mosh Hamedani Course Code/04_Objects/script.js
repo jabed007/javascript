@@ -297,3 +297,9 @@ console.log(python);
 // So, our javascript engine has what we call a garbage collector
 // The job of this garbage collector is to find the variables or constants that are no longer used and then deallocate the memory that was allocated to them earlier.
 // Memory allocation and deallocation in javascript automatically happens behind the scene and we have no control over that.
+
+// Built in objects in Javascript (Math Object)
+Math.random();
+Math.round(1.9);
+Math.max(1, 2, 3, 4, 5);
+Math.min(1, 2, 3, 4, 5);
