@@ -359,3 +359,13 @@ Thank you for joining my mailing list.
 Regards,
 Mosh`;
 console.log(anotherEmail);
+// JavaScript also has four built-in objects: Array, Date, Math, and String.
+// Date
+const now = new Date();
+console.log(now);
+
+const date1 = new Date("May 11 2018 09:00");
+console.log(date1);
+
+const date2 = new Date(2023, 0, 19, 32);
+console.log(date2);
