@@ -289,3 +289,11 @@ console.log(javacsript);
 // we can use spread operator
 const python = { ...book };
 console.log(python);
+
+// Garbage Collection
+// In low level languages like C or C++, when creating an object, we need to allocate memory to it.
+// And when we are done we have to deallocate memory. But in Javascript, we don't have this concept.
+// We cane easily create the new object, at the time initialized this object, the memory is automatically allocated to this object, next we can use that, and when we are done using, we don;t need to dealloacted the memory.
+// So, our javascript engine has what we call a garbage collector
+// The job of this garbage collector is to find the variables or constants that are no longer used and then deallocate the memory that was allocated to them earlier.
+// Memory allocation and deallocation in javascript automatically happens behind the scene and we have no control over that.
