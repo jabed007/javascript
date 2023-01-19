@@ -369,3 +369,24 @@ console.log(date1);
 
 const date2 = new Date(2023, 0, 19, 32);
 console.log(date2);
+
+console.log(now.getFullYear());
+
+// Exercise -> 1 (Address object with three properties)
+// street
+// city
+// zipCode
+// showAddress(address) (function)
+const address = {
+  street: "xyz",
+  city: "London",
+  zipcode: "abcd",
+};
+
+function showAddress(address) {
+  for (let key in address) {
+    console.log(key, address[key]);
+  }
+}
+
+showAddress(address);
