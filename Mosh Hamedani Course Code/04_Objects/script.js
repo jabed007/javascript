@@ -260,3 +260,32 @@ if ("color" in circlee) {
 } else {
   console.log("no");
 }
+
+// Cloning an Object
+// In the last lecture we learned how to enumerate the properties of an object. Now using this technique we can get all the properties in an object and copy them into another objetc.
+
+const book = {
+  page: 120,
+  read() {
+    console.log("read");
+  },
+};
+
+const javaBook = {};
+
+for (let key in book) {
+  javaBook[key] = book[key];
+}
+
+console.log(javaBook);
+
+// The above approach for coipying or cloning an object is  a little bit old. In modern JavaScript we have better ways to achieve the same thing.
+// One way is to use the object.assign method
+
+const javacsript = Object.assign({ writer: "mark" }, book);
+console.log(javacsript);
+
+// Yet another simpler and elegant way to clone an object is
+// we can use spread operator
+const python = { ...book };
+console.log(python);
