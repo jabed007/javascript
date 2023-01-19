@@ -212,3 +212,51 @@ function increase(obj) {
 increase(obj);
 
 console.log(obj);
+
+// Enumerating Properties of an Object
+const circlee = {
+  radius: 1,
+  draw() {
+    console.log("draw");
+  },
+};
+
+for (let key in circlee) {
+  console.log(key, circlee[key]);
+}
+/*
+for (let key of circlee) {
+  console.log(key); // error
+}
+*/
+
+// The for of loop can only be used with iterables such as arrays and maps.
+// Object is not iterable, so we cannot iterate it using for of loop
+// However to iterate an object we have a method (Object.keys())
+// with this we can get all the keys in our objects and this will return an array
+// And since arrays are iterable we can use the for of loop to itearte them.
+
+for (let key of Object.keys(circlee)) {
+  console.log(key);
+}
+
+// Object is a built in constructor function
+// function Object() {}
+// const x = {value: 1};
+// const x = new Object();
+// all function in javascript are object
+// So, they have properties and methods we can access using the dot notation
+
+for (let entry of Object.entries(circlee)) {
+  console.log(entry);
+}
+
+if ("radius" in circlee) {
+  console.log("yes");
+}
+
+if ("color" in circlee) {
+  console.log("yes");
+} else {
+  console.log("no");
+}
