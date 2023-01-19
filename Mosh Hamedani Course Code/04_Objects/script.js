@@ -299,7 +299,45 @@ console.log(python);
 // Memory allocation and deallocation in javascript automatically happens behind the scene and we have no control over that.
 
 // Built in objects in Javascript (Math Object)
+// Math Object
 Math.random();
 Math.round(1.9);
 Math.max(1, 2, 3, 4, 5);
 Math.min(1, 2, 3, 4, 5);
+
+// String Object
+// String primitive
+const message = "     This is my first message    "; // string is a primitive type. Primitive types don't have properties and methods. Only objects do.
+
+// So why is it that we see these properties and methods in this string
+// The reason for this is because in Javascript we have two kinds of strings
+
+// String object
+const anotherMessage = new String("Hi");
+console.log(typeof message);
+console.log(typeof anotherMessage);
+
+// The length of a string
+console.log(message.length);
+
+console.log(message[0]);
+console.log(message[1]);
+
+console.log(message.includes("my"));
+console.log(message.includes("not"));
+
+console.log(message.startsWith("This"));
+console.log(message.startsWith("this"));
+
+console.log(message.endsWith("e"));
+
+console.log(message.indexOf("my"));
+console.log(message.replace("first", "second"));
+console.log(message);
+
+console.log(message.trim());
+console.log(message);
+console.log(message.trimLeft());
+console.log(message);
+console.log(message.trimRight());
+console.log(message);
