@@ -407,8 +407,28 @@ function Address(street, city, zipcode) {
   this.zipcode = zipcode;
 }
 
-const address1 = createAddress();
-console.log(address1);
+// const address1 = createAddress();
+// console.log(address1);
 
-const address2 = new Address("x", "y", "z");
-console.log(address2);
+const address1 = new Address("a", "b", "c");
+
+const address2 = new Address("a", "b", "c");
+// console.log(address2);
+let address3 = address1;
+
+// Exercise - 03 (Object Equality)
+console.log(areEqual(address1, address2));
+console.log(areSame(address1, address2));
+console.log(areSame(address1, address3));
+
+function areEqual(addres1, address2) {
+  return (
+    address1.street === address2.street &&
+    address1.city === address2.city &&
+    address1.zipcode === address2.zipcode
+  );
+}
+
+function areSame(address1, address2) {
+  return address1 === address2;
+}
