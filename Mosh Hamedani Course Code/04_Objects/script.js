@@ -453,3 +453,18 @@ let post = {
 };
 
 console.log(post);
+
+// Exercise - 05 (Constructor Function)
+// Imagine we're building a blogging engine, the user is drafting a post, but they have not published it yet,
+
+function Post(title, body, author) {
+  this.title = title;
+  this.body = body;
+  this.author = author;
+  this.views = 0;
+  this.comments = [];
+  this.isLive = false;
+}
+
+let blogPost = new Post("a", "b", "c");
+console.log(blogPost);
