@@ -468,3 +468,18 @@ function Post(title, body, author) {
 
 let blogPost = new Post("a", "b", "c");
 console.log(blogPost);
+
+//  Exercise - 06 (Price range Objects)
+// Rference: yelp.com
+// Inexpensive
+// Moderate
+// Pricey
+
+// Create an array of objects
+// Each objects what we call a price range object
+
+let priceRanges = [
+  { label: "$", tooltip: "Inexpensive", minPerPerson: 0, maxPerPerson: 10 },
+  { label: "$$", tooltip: "Moderate", minPerPerson: 11, maxPerPerson: 20 },
+  { label: "$$$", tooltip: "Expensive", minPerPerson: 21, maxPerPerson: 50 },
+];
