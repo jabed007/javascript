@@ -390,3 +390,25 @@ function showAddress(address) {
 }
 
 showAddress(address);
+
+// Exercise-02 (Factory and constructor function)
+
+function createAddress() {
+  return {
+    street: "a",
+    city: "b",
+    zipcode: "c",
+  };
+}
+
+function Address(street, city, zipcode) {
+  this.street = street;
+  this.city = city;
+  this.zipcode = zipcode;
+}
+
+const address1 = createAddress();
+console.log(address1);
+
+const address2 = new Address("x", "y", "z");
+console.log(address2);
