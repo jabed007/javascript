@@ -5,7 +5,12 @@
 // Splitting Arrays
 // Combinning Arrays
 
-// Adding Elements
+// *******************************
+// Adding Elements to an array
+// array.push() // added elements at the end
+// array.unshift() // added elements in the beginning
+// array.splice() // added elements in the middle
+// *******************************
 const numbers = [1, 2, 3, 4];
 // numbers = []; // error
 // Here we declared an array as constant, that means we can not reassign numbers to something else, if we do this, we get this error assignment to constant variable.
@@ -39,9 +44,11 @@ console.log(numbers.lastIndexOf(1));
 console.log(numbers.indexOf(1) !== -1); // this is a little bit ugly, we have a new method in javascript for achieving the same thing
 console.log(numbers.includes(1));
 
+// ************************************
 // Finding Elements (Reference Types)
-// Finding primitives is different from finding reference types
-
+// Finding primitives is different from
+// finding reference types
+// ************************************
 const courses = [
   { id: 1, name: "a" },
   { id: 2, name: "b" },
@@ -63,7 +70,33 @@ const courseIndex = courses.findIndex(function (course) {
 
 console.log(courseIndex);
 
+// *******************************
 // Arrow functions
+// *******************************
 
 // const course = courses.find(course => course.name === 'a');
 // const courseIndex = courses.findIndex(course => course.name === 'b');
+
+// *******************************
+// Removing elements from an array
+// array.pop() // remove element in the last
+// array.shift() // remove element from the begining
+// array.splice(index, count/how-many);
+// *******************************
+
+const rolls = [1, 2, 3, 4];
+
+// End
+const last = rolls.pop();
+console.log(last);
+console.log(rolls);
+
+// Beginning
+const first = rolls.shift();
+console.log(first);
+console.log(rolls);
+
+// Middle
+const middle = rolls.splice(0, 2);
+console.log(middle);
+console.log(rolls);
