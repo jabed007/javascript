@@ -171,3 +171,13 @@ console.log(output);
 objectArray[0].id = 10;
 
 console.log(output);
+
+// The spread Operator
+const one = [1, 2, 3, 4, 5];
+const two = [6, 7, 8, 9, 10];
+const three = [...one, "a", ...two, "b"];
+console.log(three);
+
+// In the last lecture we learned that if we call the slice method without any arguments, that will return a copy of the original array
+// const copy = combined.slice();
+const copy = [...combined];
