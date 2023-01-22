@@ -172,7 +172,10 @@ objectArray[0].id = 10;
 
 console.log(output);
 
+// *******************************
 // The spread Operator
+// *******************************
+
 const one = [1, 2, 3, 4, 5];
 const two = [6, 7, 8, 9, 10];
 const three = [...one, "a", ...two, "b"];
@@ -182,7 +185,10 @@ console.log(three);
 // const copy = combined.slice();
 const copy = [...combined];
 
+// *******************************
 // Iterating an Array
+// *******************************
+
 // Earlier in the section about control flow, we learned about various loops in Javascript
 // So, in that section we learned that if we want to learned to iterate an array
 // To iterate an array we use the for of loop
@@ -191,3 +197,18 @@ const digits = [1, 2, 3];
 for (let digit of digits) console.log(digit);
 
 digits.forEach((digit, index) => console.log(index, digit));
+
+// *******************************
+// Joining Arrays
+// *******************************
+const joinedExample = [1, 2, 3, 4, 5];
+const joined = joinedExample.join(",");
+console.log(joined);
+
+// Split String
+const message = "This is my first message";
+const parts = message.split(" ");
+console.log(parts);
+
+const combinedParts = parts.join("-");
+console.log(combinedParts);
