@@ -100,3 +100,44 @@ console.log(rolls);
 const middle = rolls.splice(0, 2);
 console.log(middle);
 console.log(rolls);
+
+// *******************************
+// Emptying an Array
+// *******************************
+let classes = [1, 2, 3, 4, 5, 6];
+console.log(classes);
+
+let another = classes;
+console.log(another);
+
+// How to remove an element from an array
+// But what about emptying an array
+// How can we remove all the elements in this array
+// There are a few different solutions
+
+// Solution 1
+// We can simply reassign this to a new array
+//classes = []; // Now our array is empty
+//console.log(classes);
+
+// However, note that this old array is still in the memory, so if there are no another references to this object, eventually it will be removed by the garbage collector.
+// So, this means if we have, lets say another variable called another, and this also pointing to the same object, this original array will not be garbage collected.
+
+// When we reassign the numbers variabl, now numbers is pointing to a new object in memory, but another is still pointing to the old object.
+
+// so this solution works if we dont have any other references to the original array.
+// If we have multiple references to the original array then we need to use one of the other solutions.
+
+// Solution 2
+// classes.length = 0;
+// console.log(classes);
+// console.log(another);
+
+// Solution 3
+// classes.splice(0, numbers.length);
+// console.log(classes);
+
+// solution 4
+// is used to pop method
+while (classes.length > 0) classes.pop();
+console.log(classes);
