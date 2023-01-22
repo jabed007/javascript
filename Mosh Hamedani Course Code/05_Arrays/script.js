@@ -62,3 +62,8 @@ const courseIndex = courses.findIndex(function (course) {
 });
 
 console.log(courseIndex);
+
+// Arrow functions
+
+// const course = courses.find(course => course.name === 'a');
+// const courseIndex = courses.findIndex(course => course.name === 'b');
