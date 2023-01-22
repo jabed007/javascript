@@ -141,3 +141,33 @@ console.log(another);
 // is used to pop method
 while (classes.length > 0) classes.pop();
 console.log(classes);
+
+// *******************************
+// Combining and Slicing Array
+// *******************************
+
+// Combining Array
+const firstArray = [1, 2, 3, 4];
+const secondArray = [5, 6, 7, 8, 9];
+
+const combined = firstArray.concat(secondArray);
+console.log(combined);
+
+// Slicing Array
+const slice = combined.slice(2, 6);
+// combined.slice(2);
+// combined.slice();
+console.log(slice);
+// One thing we need to understand about both this method, is that if we are dealing with primitive values this primitive will be copied in the target array
+// but if we have objects in our array the objects themsleves are not copied, thre references are copied.
+// And that means the elements in both the input and output arrays will point to the same object
+
+// Example
+const objectArray = [{ id: 1 }, 1, 2, 3];
+const output = objectArray.concat(secondArray);
+console.log(output);
+
+// Working with object reference
+objectArray[0].id = 10;
+
+console.log(output);
