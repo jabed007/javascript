@@ -181,3 +181,13 @@ console.log(three);
 // In the last lecture we learned that if we call the slice method without any arguments, that will return a copy of the original array
 // const copy = combined.slice();
 const copy = [...combined];
+
+// Iterating an Array
+// Earlier in the section about control flow, we learned about various loops in Javascript
+// So, in that section we learned that if we want to learned to iterate an array
+// To iterate an array we use the for of loop
+const digits = [1, 2, 3];
+
+for (let digit of digits) console.log(digit);
+
+digits.forEach((digit, index) => console.log(index, digit));
