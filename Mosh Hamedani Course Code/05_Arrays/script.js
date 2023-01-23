@@ -252,3 +252,32 @@ courseArray.sort(function (a, b) {
 });
 
 console.log(courseArray);
+
+// *******************************
+// Testing the elements of an array
+// *******************************
+
+// We have two new methods in modern JavaScript called every() and sum().
+
+// Lets Imagine we want to check and see if  all numbers in this array are positive.
+
+// every() checks to see if every element in a given array matces the given criteria(value >= 0)
+// And some() checks to see if we have at least one element that matches the given criteria(value >= 0)
+
+const testNumbers = [1, 2, , -1, 3, 4, 5];
+
+// array.every();
+// if all positive then return true
+const allPositive = testNumbers.every(function (value) {
+  return value >= 0;
+});
+
+console.log(allPositive);
+
+// array.some()
+// at least one positive -> return true
+const atLeastOnePositive = testNumbers.some(function (value) {
+  return value >= 0;
+});
+
+console.log(atLeastOnePositive);
