@@ -212,3 +212,43 @@ console.log(parts);
 
 const combinedParts = parts.join("-");
 console.log(combinedParts);
+
+// *******************************
+// Sorting Arrays
+// *******************************
+const sortingArrays = [2, 3, 1];
+sortingArrays.sort();
+console.log(sortingArrays);
+
+// Another method that is often companion to the sort method is the reverse method
+// And with this we can reverse the order or elements in an array
+sortingArrays.reverse();
+console.log(sortingArrays);
+
+// This sort method is pretty useful, It's very easy to use when we have numbers and strings in an array
+
+// But when we have objects like course objects, it doesn't work by default, we have to do some extra work
+const courseArray = [
+  { id: 1, name: "Node.js" },
+  { id: 2, name: "Javascript" },
+  { id: 3, name: "ReactJs" },
+];
+
+// We want to sort this object array by the name of courses
+// So, Javascript shoould come before "Node.js"
+
+courseArray.sort(function (a, b) {
+  // a < b => -1
+  // a > b => 1
+  // a === b => 0
+
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+  console.log(nameA, nameB);
+
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
+  return 0;
+});
+
+console.log(courseArray);
