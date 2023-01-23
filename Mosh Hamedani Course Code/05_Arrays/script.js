@@ -281,3 +281,24 @@ const atLeastOnePositive = testNumbers.some(function (value) {
 });
 
 console.log(atLeastOnePositive);
+
+// Filtering an Array
+// How to filter an array based on a search criteria
+
+// So, back to our numbers array, lets say we want to return only the positive numbers
+// So, we can use the filter method
+
+const filterExample = [1, -1, 2, 3];
+
+const filtered = filterExample.filter(function (value) {
+  return value >= 0;
+});
+
+console.log(filtered);
+
+// When we called the filter method on an array, this method will loop through this array and execute the call back function for each number / each element.
+// Now, if the element matches the criteria(value >= 0) it will add this element to an array, and finally we can get the new array
+
+// Here we're dealing with an array of numbers, in a real world application, we will be using an array of objects.
+
+// For, example here on the yelp website, we can click this button to find only the restaurants, that are open now. so, this is one kind of filtering, so if we want to implement something like this, instead of an array of numbers you would have an array of restaurents and each restaurants has opening hours. so you could filter restaurants that are currently open and return them.
