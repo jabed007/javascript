@@ -31,6 +31,8 @@ const restaurant = {
   },
 };
 
+// Destructuring Array
+
 const arr = [1, 2, 3];
 const a = arr[0];
 const b = arr[1];
