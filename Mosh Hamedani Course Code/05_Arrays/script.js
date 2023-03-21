@@ -282,7 +282,10 @@ const atLeastOnePositive = testNumbers.some(function (value) {
 
 console.log(atLeastOnePositive);
 
+// *******************************
 // Filtering an Array
+// *******************************
+
 // How to filter an array based on a search criteria
 
 // So, back to our numbers array, lets say we want to return only the positive numbers
@@ -302,3 +305,10 @@ console.log(filtered);
 // Here we're dealing with an array of numbers, in a real world application, we will be using an array of objects.
 
 // For, example here on the yelp website, we can click this button to find only the restaurants, that are open now. so, this is one kind of filtering, so if we want to implement something like this, instead of an array of numbers you would have an array of restaurents and each restaurants has opening hours. so you could filter restaurants that are currently open and return them.
+
+// *******************************
+// Mapping an Array
+// *******************************
+
+// Another very useful and powerful method we have in Javascript is the map method
+// With this method we can map each item in the array to something else.

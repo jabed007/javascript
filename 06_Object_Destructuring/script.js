@@ -54,9 +54,7 @@ restaurant.orderDelivery({ address: 'abc', starterIndex: 1 });
 ///////////////////////////////////////////
 //////// Destructuring Object//////////////
 //////////////////////////////////////////
-
 // Destructuring object is very helpful when we deal with the result of an API call, which basically means to get data from another web application, like waether data or data about movies or something like that and this data usually comes in the form of objects basically. and destructuring is really a lifesaver.
-
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
@@ -92,10 +90,9 @@ const {
 } = openingHours;
 console.log(o, c);
 
-////////////////////////////////////////////
-/////////// Destructuring Array ///////////
-//////////////////////////////////////////
-
+///////////////////////////////////////////
+/////////// Destructuring Array///////////
+/////////////////////////////////////////
 const arr = [1, 2, 3];
 const aa = arr[0];
 const bb = arr[1];
@@ -137,3 +134,11 @@ console.log(i, j, k);
 // Default Values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
+
+///////////////////////////////////////////
+//////////// The spread operator//////////
+/////////////////////////////////////////
+
+// We can use spread operator to basically expand an array into all its elements. so basically unpacking all the array elements at one.
+
+const array = [7, 8, 9];
