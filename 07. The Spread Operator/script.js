@@ -11,6 +11,7 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
@@ -56,10 +57,10 @@ console.log(badNewArr); // output: [1, 2, 3, 7, 8, 9]
 
 // WITHOUT SPREAD OPERATOR
 const badNewArr2 = [1, 2, 3, arr];
-console.log(badNewArr2); // output: [1, 2, 3, Array(3)]
+console.log(badNewArr2); // output: [1, 2, 3, Array(3)] / [1, 2, 3, [7, 8, 9]]
 
 // WE CAN DO THIS USING SPREAD OPERATOR EASILY
-const goodNewArr = [1, 2, 3, ...arr];
+const goodNewArr = [1, 2, 3, ...arr]; // [1, 2, 3, ...arr] = [1, 2, 3, 7, 8, 9]
 console.log(goodNewArr); // output: [1, 2, 3, 7, 8, 9]
 
 // So what the spread operator does is to basically take all the values out of this arr. array, and then write them individually as if we wrote seven, eight, nine here manually.
@@ -68,9 +69,10 @@ console.log(goodNewArr); // output: [1, 2, 3, 7, 8, 9]
 
 console.log(goodNewArr); // output: [1, 2, 3, 7, 8, 9]
 console.log(...goodNewArr); // output: 1, 2, 3, 7, 8, 9
+// console.log(...goodNewArr) === console.log(1, 2, 3, 7, 8, 9)
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
+console.log(newMenu); // ['Pizza', 'Pasta', 'Risotto', 'Gnocci']
 
 // NOTE: Now you might have noticed that the spread operator is actually a bit similar to destructuring, because it also helps us get elements out of arrays. Now, the big difference is that the spread operator takes all the elements from the array and it also doesn't create new variables. And as a consequence, we can only use it in places where we would otherwise write values separated by commas.
 
@@ -84,14 +86,25 @@ console.log(mainMenuCopy);
 const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(menu);
 
-// Iterables: Arrays, strings, maps, sets, except object
+// NOTE: All right, so I told you that the spread operator works on arrays, but that's not entirely true, because actually, the spread operator works on all so-called iterables.
+
+// Now what is an iterable?
+// Well, there are different iterables in JavaScript. just know that iterables are things like all arrays, strings, maps, or sets, but not objects. So basically, most of the built-in data structures in JavaScript are now iterables, but except objects.
+
+// Iterables: Arrays, strings, maps, sets, NOT objects
+
+// since strings are also iterables, that means that we can use the spread operator on a string, as well.
 const str = 'Jonas';
-const letters = [...str, '', 'S.'];
-console.log(letters);
+const letters = [...str, ' ', 'S.'];
+console.log(letters); //  ['J', 'o', 'n', 'a', 's', ' ', 'S.']
+console.log(...letters); // J o n a s   S.
+console.log(...str); // J o n a s
+console.log('j', 'o'); // j o
 //console.log(`${...str} schmedtmann`); // here spread operator not work
 
+// Real World Example
 const ingredients = [
-  // prompt('Lets make pasta Ingredient 1?'),
+  // prompt('Let's make pasta Ingredient 1?'),
   // prompt('Ingredient 2'),
   // prompt('Ingredient 3'),
 ];
@@ -99,8 +112,12 @@ const ingredients = [
 restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
 restaurant.orderPasta(...ingredients);
 
+// using spread operator in objects
+
+// since ES 2018, the spread operator actually also works on objects, even though objects are not iterables.
+
 // Create new object using spread operator
-const newRestaurent = { foundedIn: 1990, ...restaurant, founder: 'Jabed' };
+const newRestaurent = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
 console.log(newRestaurent);
 
 // Copy object to a new object
