@@ -20,6 +20,11 @@ const restaurant = {
     console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
   },
 
+  orderFizza: function (mainIngredients, ...otherIngridents) {
+    console.log(mainIngredients);
+    console.log(otherIngridents);
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -115,3 +120,6 @@ add(8, 2, 5, 3, 2, 1, 4); // [8, 2, 5, 3, 2, 1, 4]
 
 const x = [23, 5, 7];
 add(...x);
+
+restaurant.orderFizza('mushrooms', 'onion', 'olives', 'spinach');
+restaurant.orderFizza('mushrooms');
