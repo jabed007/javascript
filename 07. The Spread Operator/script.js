@@ -39,9 +39,12 @@ const restaurant = {
 ////////////////// SPREAD OPERATOR ////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// WE CAN USE THE SPREAD OPERATOR TO BASICALLY EXPAND AN ARRAY
-// INTO ALL ITS ELEMENTS. SO BASICALLY UNPACKING ALL THE ARRAY
-// ELEMENTS AT ONE
+// we can use the spread operator to basically expand an array into all its elements.
+// So basically unpacking all the array elements at one.
+
+// So let's say that we have an array,
+// And now we want to create a new array based on this array but with some new elements at the beginning.
+// So how would we do that? Well, with what we already know, we would need to loop over this array, or even worse, do it manually.
 
 // LETS WE HAVE AN ARRAY
 const arr = [7, 8, 9];
@@ -49,7 +52,7 @@ const arr = [7, 8, 9];
 // NOW WE WANT TO CREATE A NEW ARRAY BASED ON THIS ARRAY
 // BUT WITH SOME NEW ELEMENTS AT THE BEGINNING
 const badNewArr = [1, 2, 3, arr[0], arr[1], arr[2]];
-console.log(badNewArr);
+console.log(badNewArr); // output: [1, 2, 3, 7, 8, 9]
 
 // WITHOUT SPREAD OPERATOR
 const badNewArr2 = [1, 2, 3, arr];
@@ -58,6 +61,8 @@ console.log(badNewArr2); // output: [1, 2, 3, Array(3)]
 // WE CAN DO THIS USING SPREAD OPERATOR EASILY
 const goodNewArr = [1, 2, 3, ...arr];
 console.log(goodNewArr); // output: [1, 2, 3, 7, 8, 9]
+
+// So what the spread operator does is to basically take all the values out of this arr. array, and then write them individually as if we wrote seven, eight, nine here manually.
 
 // NOTE: We can use the spread operator whenever we would otherwise write multiple values separated by commas and that situation happens whenever we write an array literal like we did up here thats the first situation which we it is very useful to expand an array and the second situation is when we pass arguments into functions
 
