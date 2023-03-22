@@ -11,6 +11,7 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
@@ -40,13 +41,16 @@ const restaurant = {
 //////////////////////////////////////////////////////////////
 
 // The rest pattern looks exactly like the spread operator. So it has the same syntax with the three dots but it actually does the opposite of the spread operator.
+
 // we used the spread operator to build new arrays or to pass multiple values into a function. So those are the two use cases of the spread operator and in both cases, we use the spread operator to expand an array into individual elements.
 
 // Now, the rest pattern uses the exact same syntax however, to collect multiple elements and condense them into an array.
+
 // so that's really the opposite of spread
 
 // The spread operator is to unpack an array while rest is to pack elements into an array
 
+// SPREAD, because on RIGHT side of =
 const arr = [1, 2, ...[3, 4]]; // spread operator
 console.log(arr); // output: [1, 2, 3, 4]
 // So here we are still using the spread syntax and we know that this is the spread syntax because we are using it on the right hand side of the assignment operator, so of the equal sign.
@@ -56,6 +60,7 @@ console.log(arr); // output: [1, 2, 3, 4]
 // So now we're mixing kind of everything together here
 
 // REST because on left side of = sign
+// Destructuring with rest operator
 const [a, b, ...others] = [1, 2, 3, 4, 5]; // So let's say that we are destructuring this array
 // so here it is the rest syntax because it's on the left hand side of the assignment operator,
 
@@ -72,12 +77,14 @@ console.log(a, b, others); // output: 1 2 (3) [3, 4, 5]
 
 // so we take all the elements out of that array and put it into a new array and then into this new array we also put the starter menu, okay? So this is going to be an array, a big array with all the entire menu, but now we can actually also use the rest pattern here and so again, we do that here on the left hand side while we are doing destructuring.
 
+// Destructuring with rest operator
 const [pizza, , risotto, ...otherFoods] = [
   ...restaurant.mainMenu,
   ...restaurant.starterMenu,
 ];
 
 console.log(pizza, risotto, otherFoods); // output: Pizza Risotto (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
 // note here that the rest syntax collects all the array after the last variable. So in this case here risotto so it does not include any skipped elements so it's really just the rest of the elements
 // it does not include any skipped elements and so for that reason, the rest pattern always must be the lest in the destructuring assignment because otherwise how will JavaScript know until when it should collect the rest of the array, right?
 // So for example, we could not do this so the error message is actually very explicit so the rest element must be the  last element. and also for the same reason there can only ever be one rest in any destructuring assignment.
@@ -86,6 +93,25 @@ console.log(pizza, risotto, otherFoods); // output: Pizza Risotto (4) ['Focacci
 // So the difference then of course, is that the remaining elements will be collected into a new object and not into a new array.
 
 // Objects
+// Destructuring with rest operator
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(sat); // {open: 0, close: 24}
 console.log(weekdays); // {open: 0, close: 24}
+
+// uses of Rest Opeator with function
+
+// So this whole first part is for destructuring and then the second part will be about functions basically. So, remember that also for the spread operator the second use case was to pass multiple arguments into a function all at the same time.
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 3); // [2, 3]
+add(5, 3, 7, 2); // [5, 3, 7, 2]
+add(8, 2, 5, 3, 2, 1, 4); // [8, 2, 5, 3, 2, 1, 4]
+
+const x = [23, 5, 7];
+add(...x);
