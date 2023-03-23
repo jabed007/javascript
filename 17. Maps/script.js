@@ -118,3 +118,42 @@ rest.set(arr, 'Test');
 //onsole.log(rest.get([1, 2])); // undefined
 
 console.log(rest.get(arr)); // Test
+
+// Maps Iteration
+// So let's continue learning about maps. So in the last video we created an empty map and then edit elements to it by using the set method. Remember, however, there is actually another way of populating a new map without having to use the set method. And I prefer that because the set method is a bit cumbersome when there are a lot of values to set.
+
+const quiz = new Map([
+  ['question', 'What is the best programming language in the world'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'correct'],
+  [false, 'try again'],
+]);
+
+// Convert object to map
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours)); // (3) [Array(2), Array(2), Array(2)]
+console.log(hoursMap); // Map(3) {'thu' => {…}, 'fri' => {…}, 'sat' => {…}}
+
+// Iterations of map
+
+// Quiz App
+console.log(quiz.get('question'));
+
+for (const [key, value] of quiz) {
+  if (typeof key === 'number') {
+    console.log(`Option ${key}: ${value}`);
+  }
+}
+
+const answer = Number(prompt('Your answer'));
+console.log(answer);
+console.log(quiz.get(quiz.get('correct') === answer));
+
+// Convert map to an array
+console.log([...quiz]); // (7) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+console.log(quiz.entries()); // MapIterator {'question' => 'What is the best programming language in the world', 1 => 'C', 2 => 'Java', 3 => 'JavaScript', 'correct' => 3, …}
+console.log(quiz.keys()); // MapIterator {'question', 1, 2, 3, 'correct', …}
+console.log(quiz.values()); // MapIterator {'What is the best programming language in the world', 'C', 'Java', 'JavaScript', 3, …}
